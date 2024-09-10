@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D5D6D6"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="118dp"
+        android:layout_marginBottom="27dp"
+        android:text="Escolha um para começar"
+        app:layout_constraintBottom_toTopOf="@+id/resultadoMaquina"
+        app:layout_constraintEnd_toEndOf="@+id/resultadoMaquina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/resultadoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/usuario" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="31dp"
+        app:layout_constraintBottom_toTopOf="@+id/textoResultado"
+        app:layout_constraintEnd_toStartOf="@+id/resultadoMaquina"
+        app:layout_constraintStart_toEndOf="@+id/resultadoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoMaquina"
+        app:srcCompat="@drawable/versus" />
+
+    <ImageView
+        android:id="@+id/resultadoMaquina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/maquina" />
+
+    <ImageButton
+        android:id="@+id/lagarto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/papel"
+        app:layout_constraintEnd_toStartOf="@+id/botaoSpock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lagarto" />
+
+    <ImageButton
+        android:id="@+id/botaoSpock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="11dp"
+        app:layout_constraintBottom_toTopOf="@+id/pedra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lagarto"
+        app:layout_constraintTop_toBottomOf="@+id/textoResultado"
+        app:srcCompat="@drawable/spock" />
+
+    <ImageButton
+        android:id="@+id/papel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="7dp"
+        android:backgroundTint="#D5D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/tesoura"
+        app:layout_constraintEnd_toStartOf="@+id/pedra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/papel" />
+
+    <ImageButton
+        android:id="@+id/pedra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="7dp"
+        app:layout_constraintBottom_toTopOf="@+id/tesoura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/papel"
+        app:layout_constraintTop_toBottomOf="@+id/botaoSpock"
+        app:srcCompat="@drawable/pedra" />
+
+    <ImageButton
+        android:id="@+id/tesoura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pedra"
+        app:srcCompat="@drawable/tesoura" />
+
+    <TextView
+        android:id="@+id/textoResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="29dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/botaoSpock"
+        app:layout_constraintEnd_toEndOf="@+id/lagarto"
+        app:layout_constraintStart_toEndOf="@+id/lagarto"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="4dp"
+        android:text="Você"
+        app:layout_constraintStart_toStartOf="@+id/resultadoUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoUsuario" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="9dp"
+        android:text="Maquina"
+        app:layout_constraintStart_toStartOf="@+id/resultadoMaquina"
+        app:layout_constraintTop_toBottomOf="@+id/resultadoMaquina" />
+</androidx.constraintlayout.widget.ConstraintLayout>
